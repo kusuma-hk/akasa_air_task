@@ -1,0 +1,5 @@
+pandas
+numpy
+SQLAlchemy
+mysql-connector-python
+python-dotenv
