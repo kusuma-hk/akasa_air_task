@@ -1,6 +1,5 @@
 # Akasa Air – Data Engineer Assignment 1
 
-# Akasa Air — Data Engineer Assignment
 **Author:** Kusuma H K 
 
 ---
@@ -16,6 +15,7 @@ Two approaches to process the data:
 2. **B. IN-MEMORY APPROACH** 
 - Data Cleaning
 - KPI Functions
+
 Both approaches read customer data from a CSV file and order data from an XML file
 
 ## KPIs performed:
