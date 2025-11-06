@@ -31,42 +31,40 @@ Both approaches read customer data from a CSV file and order data from an XML fi
 
 1. Clone the Repository
 
-`git clone https://github.com/kusuma-hk/akasa_air_task.git` <br>
-`cd akasa_air_task `
+    `git clone https://github.com/kusuma-hk/akasa_air_task.git` <br>
+    `cd akasa_air_task `
 
 2. Install dependencies
 (Make sure you have Python 3.10+ installed for libraries version number compatibility)
 
-```bash
-pip install -r requirements.txt 
+    `pip install -r requirements.txt `
 
 
 3. Prepared data (input files) are in the /data/ folder:
 - data/task_DE_new_customers.csv
 - data/task_DE_new_orders.xml
 
+---
 
 ## TO RUN THE APPLICATION
+
 **1. Table-Based approach**
 Step 1: Create the Database
 Open MySQL Workbench (or MySQL CLI) and create a new empty database:
-```bash
-CREATE DATABASE akasa_air;
+    `CREATE DATABASE akasa_air;`
 
 Step 2: Set Up Environment Variables
 Copy .env.example → .env
 Then fill in your MySQL credentials (i.e., only your password):
-```bash
-DB_TYPE=mysql
-DB_NAME=akasa_air
-DB_USER=root
-DB_PASS=<your_password>
-DB_HOST=localhost
-DB_PORT=3306
+`DB_TYPE=mysql <br>
+DB_NAME=akasa_air <br>
+DB_USER=root   <br>
+DB_PASS=<your_password> <br>
+DB_HOST=localhost  <br>
+DB_PORT=3306   `
 
 Step 3: Final step for first approach, run the ETL script in terminal:
-```bash
-python src/etl_database.py
+    `python src/etl_database.py`
 
 After successfully executing, we should get respective CSV files inside the /outputs/ folder (for reference and to show results, output files are pushed into GitHub repo as well) which are:
 - repeat_customers.csv
@@ -77,19 +75,19 @@ After successfully executing, we should get respective CSV files inside the /out
 
 Step 4: Verify in MySQL
 To check the tables inside MySQL Workbench:
-```bash
-USE akasa_air;
-SHOW TABLES;
-SELECT COUNT(*) FROM orders;
+    
+   `USE akasa_air;
+    SHOW TABLES;
+    SELECT COUNT(*) FROM orders;`
 
 
-2. In-Memory approach
+**2. In-Memory approach**
 This approach performs all transformations in Python using Pandas, without a database.
 It’s faster for smaller datasets and ideal for quick analytics or prototyping.
 
 Step 1: Run the In-Memory Script:
-```bash
-python src/etl_inmemory.py
+
+    `python src/etl_inmemory.py
 
 Step 2: After successfully executing we should get respective CSV files inside /outputs/ folder which are:
 
