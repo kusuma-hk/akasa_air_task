@@ -76,7 +76,7 @@ After successfully executing, we should get respective CSV files inside the /out
 - top_spenders_30days.csv
 
 
-Step 4: Verify in MySQL
+Step 4: Verify in MySQL. <br>
 To check the tables inside MySQL Workbench: <br>
     
 `USE akasa_air;` <br>
@@ -85,6 +85,7 @@ To check the tables inside MySQL Workbench: <br>
 
 
 **2. In-Memory approach**
+
 This approach performs all transformations in Python using Pandas, without a database.
 It’s faster for smaller datasets and ideal for quick analytics or prototyping.
 
