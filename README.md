@@ -29,11 +29,11 @@ Both approaches read customer data from a CSV file and order data from an XML fi
 ---
 ## SETUP INSTRUCTIONS
 
-### 1. Clone the Repository
+1. Clone the Repository
+
 ```bash
 git clone https://github.com/kusuma-hk/akasa_air_task.git
 cd akasa_air_task
-
 
 2. Install dependencies
 (Make sure you have Python 3.10+ installed for libraries version number compatibility)
