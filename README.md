@@ -70,12 +70,12 @@ Step 2: Set Up Environment Variables
 
 Copy .env.example -> .env
 Then fill in your MySQL credentials(i.e.,only your password):
-DB_TYPE=mysql
-DB_NAME=akasa_air
-DB_USER=root
-DB_PASS=<your_password>
-DB_HOST=localhost
-DB_PORT=3306
+DB_TYPE=mysql <br>
+DB_NAME=akasa_air <br>
+DB_USER=root  <br>
+DB_PASS=<your_password>  <br>
+DB_HOST=localhost  <br>
+DB_PORT=3306   
 
 Step 3: Final step for first approach, run the etl script in terminal:
 python src/etl_database.py
