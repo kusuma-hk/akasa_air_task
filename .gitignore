@@ -1,1 +1,7 @@
+# Sensitive / local-only files
 .env
+*.db
+*.log
+__pycache__/
+.vscode/
+.idea/
