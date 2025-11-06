@@ -49,6 +49,7 @@ Both approaches read customer data from a CSV file and order data from an XML fi
 ## TO RUN THE APPLICATION
 
 **1. Table-Based approach**
+
 Step 1: Create the Database
 Open MySQL Workbench (or MySQL CLI) and create a new empty database:
     `CREATE DATABASE akasa_air;`
