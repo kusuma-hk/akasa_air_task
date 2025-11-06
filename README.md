@@ -51,18 +51,20 @@ Both approaches read customer data from a CSV file and order data from an XML fi
 **1. Table-Based approach**
 
 Step 1: Create the Database
-Open MySQL Workbench (or MySQL CLI) and create a new empty database:
+
+Open MySQL Workbench (or MySQL CLI) and create a new empty database: <br>
     `CREATE DATABASE akasa_air;`
 
-Step 2: Set Up Environment Variables
+Step 2: Set Up Environment Variables<br>
 Copy .env.example → .env
-Then fill in your MySQL credentials (i.e., only your password):
-`DB_TYPE=mysql <br>
-DB_NAME=akasa_air <br>
-DB_USER=root   <br>
-DB_PASS=<your_password> <br>
-DB_HOST=localhost  <br>
-DB_PORT=3306   `
+
+Then fill in your MySQL credentials (i.e., only your password):<br>
+`DB_TYPE=mysql` <br>
+`DB_NAME=akasa_air` <br>
+`DB_USER=root`   <br>
+`DB_PASS=<your_password> ` <br>
+`DB_HOST=localhost  ` <br>
+`DB_PORT=3306   `
 
 Step 3: Final step for first approach, run the ETL script in terminal:
     `python src/etl_database.py`
