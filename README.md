@@ -48,8 +48,8 @@ akasa_air_task/
 
 1. Clone the Repository
 
-`git clone https://github.com/kusuma-hk/akasa_air_task.git
-cd akasa_air_task`
+    `git clone https://github.com/kusuma-hk/akasa_air_task.git`
+    `cd akasa_air_task`
 
 2. Install dependencies (Make sure you have Python 3.10+ installed for libraries version number compatibality)
 pip install -r requirements.txt
