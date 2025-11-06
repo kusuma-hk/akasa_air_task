@@ -47,6 +47,7 @@ akasa_air_task/
 ## SETUP INSTRUCTIONS
 
 1. Clone the Repository
+
 `git clone https://github.com/kusuma-hk/akasa_air_task.git
 cd akasa_air_task`
 
