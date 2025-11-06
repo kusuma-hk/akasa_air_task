@@ -37,23 +37,27 @@ cd akasa_air_task
 
 2. Install dependencies
 (Make sure you have Python 3.10+ installed for libraries version number compatibility)
+
+```bash
 pip install -r requirements.txt
 
 
 3. Prepared data (input files) are in the /data/ folder:
-data/task_DE_new_customers.csv
-data/task_DE_new_orders.xml
+- data/task_DE_new_customers.csv
+- data/task_DE_new_orders.xml
 
 
-TO RUN THE APPLICATION
-1. Table-Based approach
+## TO RUN THE APPLICATION
+**1. Table-Based approach**
 Step 1: Create the Database
 Open MySQL Workbench (or MySQL CLI) and create a new empty database:
+```bash
 CREATE DATABASE akasa_air;
 
 Step 2: Set Up Environment Variables
 Copy .env.example → .env
 Then fill in your MySQL credentials (i.e., only your password):
+```bash
 DB_TYPE=mysql
 DB_NAME=akasa_air
 DB_USER=root
@@ -62,25 +66,19 @@ DB_HOST=localhost
 DB_PORT=3306
 
 Step 3: Final step for first approach, run the ETL script in terminal:
+```bash
 python src/etl_database.py
 
 After successfully executing, we should get respective CSV files inside the /outputs/ folder (for reference and to show results, output files are pushed into GitHub repo as well) which are:
-
-
-repeat_customers.csv
-
-
-monthly_order_trends.csv
-
-
-regional_revenue.csv
-
-
-top_spenders_30days.csv
+- repeat_customers.csv
+- monthly_order_trends.csv
+- regional_revenue.csv
+- top_spenders_30days.csv
 
 
 Step 4: Verify in MySQL
 To check the tables inside MySQL Workbench:
+```bash
 USE akasa_air;
 SHOW TABLES;
 SELECT COUNT(*) FROM orders;
@@ -89,21 +87,16 @@ SELECT COUNT(*) FROM orders;
 2. In-Memory approach
 This approach performs all transformations in Python using Pandas, without a database.
 It’s faster for smaller datasets and ideal for quick analytics or prototyping.
+
 Step 1: Run the In-Memory Script:
+```bash
 python src/etl_inmemory.py
 
 Step 2: After successfully executing we should get respective CSV files inside /outputs/ folder which are:
 
-
-inmemory_repeat_customers.csv
-
-
-inmemory_monthly_trends.csv
-
-
-inmemory_regional_revenue.csv
-
-
-inmemory_top_spenders_30days.csv
+- inmemory_repeat_customers.csv
+- inmemory_monthly_trends.csv
+- inmemory_regional_revenue.csv
+- inmemory_top_spenders_30days.csv
 
 ---
