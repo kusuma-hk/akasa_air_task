@@ -55,8 +55,8 @@ Step 1: Create the Database
 Open MySQL Workbench (or MySQL CLI) and create a new empty database: <br>
     `CREATE DATABASE akasa_air;`
 
-Step 2: Set Up Environment Variables<br>
-Copy .env.example → .env
+Step 2: Set Up Environment Variables.<br>
+Copy code from .env.example → .env
 
 Then fill in your MySQL credentials (i.e., only your password):<br>
 `DB_TYPE=mysql` <br>
@@ -77,11 +77,11 @@ After successfully executing, we should get respective CSV files inside the /out
 
 
 Step 4: Verify in MySQL
-To check the tables inside MySQL Workbench:
+To check the tables inside MySQL Workbench: <br>
     
-    `USE akasa_air;` <br>
-    `SHOW TABLES;` <br>
-    `SELECT COUNT(*) FROM orders;`
+`USE akasa_air;` <br>
+`SHOW TABLES;` <br>
+`SELECT COUNT(*) FROM orders;`
 
 
 **2. In-Memory approach**
@@ -90,7 +90,7 @@ It’s faster for smaller datasets and ideal for quick analytics or prototyping.
 
 Step 1: Run the In-Memory Script:
 
-    `python src/etl_inmemory.py`
+`python src/etl_inmemory.py`
 
 Step 2: After successfully executing we should get respective CSV files inside /outputs/ folder which are:
 
