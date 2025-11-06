@@ -62,11 +62,11 @@ Then fill in your MySQL credentials (i.e., only your password):<br>
 `DB_TYPE=mysql` <br>
 `DB_NAME=akasa_air` <br>
 `DB_USER=root`   <br>
-`DB_PASS=<your_password> ` <br>
+`DB_PASS=<your_password(e.g.,unicorn090)> ` <br>
 `DB_HOST=localhost  ` <br>
 `DB_PORT=3306   `
 
-Step 3: Final step for first approach, run the ETL script in terminal:
+Step 3: Final step for first approach, run the ETL script in terminal: <br>
     `python src/etl_database.py`
 
 After successfully executing, we should get respective CSV files inside the /outputs/ folder (for reference and to show results, output files are pushed into GitHub repo as well) which are:
@@ -79,9 +79,9 @@ After successfully executing, we should get respective CSV files inside the /out
 Step 4: Verify in MySQL
 To check the tables inside MySQL Workbench:
     
-   `USE akasa_air;
-    SHOW TABLES;
-    SELECT COUNT(*) FROM orders;`
+    `USE akasa_air;` <br>
+    `SHOW TABLES;` <br>
+    `SELECT COUNT(*) FROM orders;`
 
 
 **2. In-Memory approach**
@@ -90,7 +90,7 @@ It’s faster for smaller datasets and ideal for quick analytics or prototyping.
 
 Step 1: Run the In-Memory Script:
 
-    `python src/etl_inmemory.py
+    `python src/etl_inmemory.py`
 
 Step 2: After successfully executing we should get respective CSV files inside /outputs/ folder which are:
 
