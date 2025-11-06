@@ -48,8 +48,8 @@ akasa_air_task/
 
 1. Clone the Repository
 
- ```git clone https://github.com/kusuma-hk/akasa_air_task.git
-    cd akasa_air_task ```
+    git clone https://github.com/kusuma-hk/akasa_air_task.git
+    cd akasa_air_task 
 
 2. Install dependencies (Make sure you have Python 3.10+ installed for libraries version number compatibality)
 pip install -r requirements.txt
@@ -73,14 +73,20 @@ Then fill in your MySQL credentials(i.e.,only your password):
 DB_TYPE=mysql
 DB_NAME=akasa_air
 DB_USER=root
-DB_PASS=your_password
+DB_PASS=<your_password>
 DB_HOST=localhost
 DB_PORT=3306
 
 Step 3: Final step for first approach, run the etl script in terminal:
 python src/etl_database.py
 
-After successfully executing we should get a respective csv files inside /outputs/ folder (for reference and to show results, output files are pushed into github repo as well).
+After successfully executing we should get a respective csv files inside /outputs/ folder (for reference and to show results, output files are pushed into github repo as well) which are:
+- repeat_customers.csv
+- monthly_order_trends.csv
+- regional_revenue.csv
+- top_spenders_30days.csv
+
+Step 4: 
 
 **2. In-Memroy approach**
 This approach performs all transformations in Python using Pandas, without a database.
@@ -91,4 +97,8 @@ Step 1: Run the In-Memory Script:
 
 python src/etl_inmemory.py
 
-Step 2: 
+Step 2: After successfully executing we should get a respective csv files inside /outputs/ folder which are:
+- inmemory_repeat_customers.csv
+- inmemory_monthly_trends.csv
+- inmemory_regional_revenue.csv
+- inmemory_top_spenders_30days.csv 
